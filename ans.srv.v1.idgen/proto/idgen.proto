@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package idgen;
+
+
+service IdGenService {
+    rpc GetId(Req) returns (Response) {}
+}
+
+//返回值
+message Response {
+    uint64 Id = 1;
+}
+
+//
+message Req {
+    //登陆
+    int32 MId = 1;
+}
+ 
